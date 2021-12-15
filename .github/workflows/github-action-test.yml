@@ -1,11 +1,23 @@
 name: github-action-test
 on: push
-jobs:
-  my-job:
-    runs-on: ubuntu-latest
+
+runs-on: macos-latest
+
+    strategy:
+      matrix:
+        node-version: [17.x]
     steps:
       - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+      
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: npm install
-        run: make install
-      - name: Run Linter
-        run: make lint
+        run: |
+          make install
+        env:
+          CI: true
+      - name: Run linter
+        run: |
+          make lint
