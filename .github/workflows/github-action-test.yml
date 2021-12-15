@@ -1,4 +1,4 @@
-name: github-actions-test
+name: github-action-test
 on: push
 jobs:
   my-job:
@@ -6,8 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: npm install
-        run: |
-          make install
+        run: make install
       - name: Run Linter
-        run: |
-          make lint
+        run: make lint
