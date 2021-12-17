@@ -11,3 +11,5 @@ publish:
 lint:
 	npx eslint .
 	
+run brain-even:
+	node bin/brain-even.js
