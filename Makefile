@@ -13,3 +13,6 @@ lint:
 	
 run brain-even:
 	node bin/brain-even.js
+
+run brain-calc:
+	node bin/brain-calc.js
