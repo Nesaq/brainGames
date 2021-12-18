@@ -7,10 +7,12 @@ const gameStart = (gameQuestion, dataRounds) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(gameQuestion);
+
   for (let i = 0; i < 3; i += 1) {
     const [questionForUser, correctAnswer] = dataRounds();
     console.log(`Question: ${questionForUser}`);
     const playerAnswer = readlineSync.question('Your Answer: ');
+
     if (playerAnswer !== correctAnswer) {
       console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${name}!`);

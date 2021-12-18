@@ -17,11 +17,11 @@ const gameQuestion = 'What is the result of the expression?';
 const getAnswerTheQuestion = () => {
   const operators = ['+', '-', '*'];
 
-  const num1 = generateRandomNumber(1, 100);
-  const num2 = generateRandomNumber(1, 100);
+  const num1 = generateRandomNumber(30, 1);
+  const num2 = generateRandomNumber(30, 1);
   const randomOperator = operators[generateRandomNumber(0, 2)];
   const questionForUser = `${num1} ${randomOperator} ${num2}`;
-  console.log(questionForUser);
+  // console.log(questionForUser);
   const correctAnswer = String(calculation(num1, num2, randomOperator)); // проблема тут.
   return [questionForUser, correctAnswer];
 };
