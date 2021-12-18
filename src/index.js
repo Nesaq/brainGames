@@ -8,7 +8,7 @@ const gameStart = (gameQuestion, dataRounds) => {
   console.log(`Hello, ${name}!`);
   console.log(gameQuestion);
   for (let i = 0; i < 3; i += 1) {
-    const [correctAnswer, questionForUser] = dataRounds();
+    const [questionForUser, correctAnswer] = dataRounds();
     console.log(`Question: ${questionForUser}`);
     const playerAnswer = readlineSync.question('Your Answer: ');
     if (playerAnswer !== correctAnswer) {

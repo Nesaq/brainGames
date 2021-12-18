@@ -22,7 +22,7 @@ const getAnswerTheQuestion = () => {
   const randomOperator = operators[generateRandomNumber(0, 2)];
   const questionForUser = `${num1} ${randomOperator} ${num2}`;
   console.log(questionForUser);
-  const correctAnswer = calculation(num1, num2, randomOperator).toString(); // проблема тут.
+  const correctAnswer = String(calculation(num1, num2, randomOperator)); // проблема тут.
   return [questionForUser, correctAnswer];
 };
 
