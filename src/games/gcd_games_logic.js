@@ -1,6 +1,6 @@
 import { generateRandomNumber } from '../index.js';
 // eslint-disable-next-line import/no-unresolved
-// import gameStart from '../src/index.js';
+// import gameStart from '../index.js';
 
 const getGcd = (a, b) => {
   let num1 = a;
@@ -24,7 +24,8 @@ const gameGcd = () => {
   return (questionForUser, correctAnswer);
 };
 // const gcdGame = () => {
-  // gameStart(gameQuestion, gameOfthrones);
+  // gameStart(gameQuestion, rockStar);
 // };
 
 export default { gameQuestion, gameGcd };
+// export default gcdGame;
