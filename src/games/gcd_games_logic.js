@@ -1,6 +1,6 @@
 import { generateRandomNumber } from '../index.js';
 // eslint-disable-next-line import/no-unresolved
-import gameStart from '../src/index.js';
+// import gameStart from '../src/index.js';
 
 const getGcd = (a, b) => {
   let num1 = a;
@@ -16,15 +16,15 @@ const getGcd = (a, b) => {
 };
 const gameQuestion = 'Find the greatest common divisor of given numbers.';
 
-const gameOfthrones = () => {
+const gameGcd = () => {
   const num1 = generateRandomNumber(1, 60);
   const num2 = generateRandomNumber(1, 60);
   const questionForUser = `${num1} ${num2}`;
   const correctAnswer = String(getGcd(num1, num2));
   return (questionForUser, correctAnswer);
 };
-const gcdGame = () => {
-  gameStart(gameQuestion, gameOfthrones);
-};
+// const gcdGame = () => {
+  // gameStart(gameQuestion, gameOfthrones);
+// };
 
-export default gcdGame;
+export default { gameQuestion, gameGcd };
