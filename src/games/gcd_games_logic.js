@@ -18,9 +18,9 @@ const gameGcd = () => {
   const num1 = generateRandomNumber(40, 1);
   const num2 = generateRandomNumber(40, 1);
   const questionForUser = `${num1} ${num2}`;
-  // console.log(questionForUser);
+  console.log(questionForUser);
   const correctAnswer = getGcd(num1, num2);
   // console.log(correctAnswer);
-  return (questionForUser, correctAnswer);
+  return [questionForUser, correctAnswer];
 };
 export { gameQuestion, gameGcd };
