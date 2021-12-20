@@ -10,9 +10,15 @@ publish:
 
 lint:
 	npx eslint .
+
+lint fix:
+	npx eslint --fix .
 	
 run brain-even:
 	node bin/brain-even.js
 
 run brain-calc:
 	node bin/brain-calc.js
+	
+run brain-gcd:
+	node bin/brain-gcd.js
