@@ -22,3 +22,6 @@ run brain-calc:
 	
 run brain-gcd:
 	node bin/brain-gcd.js
+	
+run brain-progression:
+	node bin/brain-progression.js
