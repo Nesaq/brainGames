@@ -1,10 +1,11 @@
 import { generateRandomNumber } from '../index.js';
 
-const getProgression = (itemOfPr, passes) => {
+const getProgression = (itemOfPr, numbersOfPr) => {
   const massiveForProgression = [];
   massiveForProgression.push(itemOfPr);
+
   for (let i = 0; i < 9; i += 1) {
-    massiveForProgression.push(massiveForProgression[i] + passes);
+    massiveForProgression.push(massiveForProgression[i] + numbersOfPr);
   }
   return massiveForProgression;
 };
@@ -12,13 +13,14 @@ const getProgression = (itemOfPr, passes) => {
 const gameQuestion = 'What number is missing in the progression?';
 
 const progressionGame = () => {
-  const itemOfPr = generateRandomNumber(1, 10);
-  const passes = generateRandomNumber(1, 10);
-  const progression = getProgression(itemOfPr, passes);
-  const index = generateRandomNumber(0, 10);
+  const itemOfPr = generateRandomNumber(0, 0);
+  const numbersOfPr = generateRandomNumber(5, 15);
+  const progression = getProgression(itemOfPr, numbersOfPr);
+  const index = generateRandomNumber(2, 8);
   const correctAnswer = progression[index];
   progression[index] = '...';
   const questionForUser = progression.join(' ');
+
   return [questionForUser, correctAnswer];
 };
 export { gameQuestion, progressionGame };
