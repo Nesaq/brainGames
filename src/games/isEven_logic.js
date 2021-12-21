@@ -17,7 +17,7 @@ const startGame = () => {
         console.log('Correct!');
       } else {
         console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
-        console.log(`Let's try again,${name}`);
+        console.log(`Let's try again, ${name}!`);
         return;
       }
     }
@@ -26,7 +26,7 @@ const startGame = () => {
         console.log('Correct!');
       } else {
         console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
-        console.log(`Let's try again,${name}`);
+        console.log(`Let's try again, ${name}!`);
         return;
       }
     } else if (answer !== 'yes' && answer !== 'no') {
