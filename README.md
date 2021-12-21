@@ -13,11 +13,10 @@ Before you is a series of five console games.
 Follow the steps below to install them for yourself:
 
 1. Download the repository.
-2. Type in the console command "make install".
-3. Set dependencies with the command.
-4. Install games using the npm link command in the terminal.
-5. Type: make "game-name" to run the games.
-6. Node.js version 17 and higher.
+2. Type in the terminal command "make install" for set dependencies.
+3. Install games using the "npm link" command in the terminal.
+4. Type: make "game-name" to run the games.
+5. Node.js version 17 and higher.
 
 Game names:
 
