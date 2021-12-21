@@ -18,7 +18,7 @@ const progressionGame = () => {
   const progression = getProgression(itemOfPr, numbersOfPr);
   const index = generateRandomNumber(2, 8);
   const correctAnswer = progression[index];
-  progression[index] = '...';
+  progression[index] = '..';
   const questionForUser = progression.join(' ');
 
   return [questionForUser, correctAnswer];
