@@ -31,7 +31,7 @@ const startGame = () => {
       }
     } else if (answer !== 'yes' && answer !== 'no') {
       console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
-      console.log(`Let's try again,${name}`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   } console.log(`Congratulations, ${name}!`);
