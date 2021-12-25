@@ -1,4 +1,5 @@
-import { generateRandomNumber } from '../index.js';
+import generateRandomNumber from '../utility.js';
+import gameStart from '../index.js';
 
 const getProgression = (itemOfPr, numbersOfPr) => {
   const massiveForProgression = [];
@@ -23,4 +24,9 @@ const progressionGame = () => {
 
   return [questionForUser, correctAnswer];
 };
-export { gameQuestion, progressionGame };
+
+const startProgressionGame = () => {
+  gameStart(gameQuestion, progressionGame);
+};
+
+export default startProgressionGame;

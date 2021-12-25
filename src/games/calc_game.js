@@ -1,4 +1,5 @@
-import { generateRandomNumber } from '../index.js';
+import generateRandomNumber from '../utility.js';
+import gameStart from '../index.js';
 
 const calculation = (num1, operators, num2) => {
   switch (operators) {
@@ -21,11 +22,13 @@ const getAnswerTheQuestion = () => {
   const num2 = generateRandomNumber(30, 1);
   const randomOperator = operators[generateRandomNumber(0, 2)];
   const questionForUser = `${num1} ${randomOperator} ${num2}`;
-  // console.log(questionForUser);
   const correctAnswer = String(calculation(num1, randomOperator, num2));
-  // const correctAnswer = getCorrectAnswer.toString();
-  // console.log(randomOperator);
+
   return [questionForUser, correctAnswer];
 };
 
-export { gameQuestion, getAnswerTheQuestion };
+const startCalcGame = () => {
+  gameStart(gameQuestion, getAnswerTheQuestion);
+};
+
+export default startCalcGame;

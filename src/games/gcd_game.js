@@ -1,4 +1,5 @@
-import { generateRandomNumber } from '../index.js';
+import generateRandomNumber from '../utility.js';
+import gameStart from '../index.js';
 
 const getGcd = (a, b) => {
   let num1 = a;
@@ -18,9 +19,13 @@ const gameGcd = () => {
   const num1 = generateRandomNumber(40, 1);
   const num2 = generateRandomNumber(40, 1);
   const questionForUser = `${num1} ${num2}`;
-  console.log(questionForUser);
   const correctAnswer = getGcd(num1, num2);
-  // console.log(correctAnswer);
+
   return [questionForUser, correctAnswer];
 };
-export { gameQuestion, gameGcd };
+
+const startGcdGame = () => {
+  gameStart(gameQuestion, gameGcd);
+};
+
+export default startGcdGame;

@@ -1,4 +1,5 @@
-import { generateRandomNumber } from '../index.js';
+import generateRandomNumber from '../utility.js';
+import gameStart from '../index.js';
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -22,4 +23,9 @@ const gamePrime = () => {
 
   return [questionForUser, correctAnswer];
 };
-export { gameQuestion, gamePrime };
+
+const startIsPrime = () => {
+  gameStart(gameQuestion, gamePrime);
+};
+
+export default startIsPrime;
