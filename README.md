@@ -4,7 +4,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-![example workflow](https://github.com/Nesaq/frontend-project-lvl1/actions/workflows/github-action-test.yml/badge.svg)
+[![My Github Actions](https://github.com/Nesaq/frontend-project-lvl1/workflows/github-action-test/badge.svg)](https://github.com/Nesaq/frontend-project-lvl1/actions)
 
 # Welcome to "Brain-games!"
 
