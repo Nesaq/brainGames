@@ -6,25 +6,28 @@
 
 ![github-action-test](https://github.com/Nesaq/frontend-project-lvl1/actions/workflows/github-action-test.yml/badge.svg)
 
-Welcome to "Brain-games!"
+# Welcome to "Brain-games!"
 
-Before you is a series of five console games.
+## Before you is a series of five console games.
 
-Follow the steps below to install them for yourself:
+### Follow the steps below to install them for yourself:
 
 1. Download the repository.
-2. Type in the terminal command "make install" for set dependencies.
-3. Install games using the "npm link" command in the terminal.
-4. Type: make "game-name" to run the games.
+2. Type in the terminal command `make install` for set dependencies.
+3. Install games using the `npm link` command in the terminal.
+4. Type: make `game-name` to run the games.
 5. Node.js version 17 and higher.
 
-Game names:
+#### Game names:
 
+```
 1. brain-even
 2. brain-calc
 3. brain-gcd
 4. brain-progression
 5. brain-prime
+
+```
 
 brain-even
 [![asciicast](https://asciinema.org/a/457842.svg)](https://asciinema.org/a/457842)
