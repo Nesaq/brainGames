@@ -1,24 +1,24 @@
-import generateRandomNumber from '../utility.js';
+import generateRandomNumber from '../fnRandomNumber.js';
 import gameStart from '../index.js';
 
-const getProgression = (itemOfPr, numbersOfPr) => {
-  const massiveForProgression = [];
-  massiveForProgression.push(itemOfPr);
+const getProgression = (start, stepOfProgression, progressionLength) => {
+  const progression = [];
 
-  for (let i = 0; i < 9; i += 1) {
-    massiveForProgression.push(massiveForProgression[i] + numbersOfPr);
+  for (let i = 0; i < progressionLength; i += 1) {
+    progression.push(start + stepOfProgression * i);
   }
-  return massiveForProgression;
+  return progression;
 };
 
 const gameQuestion = 'What number is missing in the progression?';
 
 const progressionGame = () => {
-  const itemOfPr = generateRandomNumber(0, 0);
-  const numbersOfPr = generateRandomNumber(5, 15);
-  const progression = getProgression(itemOfPr, numbersOfPr);
+  const start = generateRandomNumber(0, 0);
+  const stepOfProgression = generateRandomNumber(5, 15);
+  const progressionLength = generateRandomNumber(4, 11);
+  const progression = getProgression(start, stepOfProgression, progressionLength);
   const index = generateRandomNumber(2, 8);
-  const correctAnswer = progression[index].toString();
+  const correctAnswer = String(progression[index]);
   progression[index] = '..';
   const questionForUser = progression.join(' ');
 

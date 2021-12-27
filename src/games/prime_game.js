@@ -1,4 +1,4 @@
-import generateRandomNumber from '../utility.js';
+import generateRandomNumber from '../fnRandomNumber.js';
 import gameStart from '../index.js';
 
 const isPrime = (num) => {
@@ -17,9 +17,9 @@ const isPrime = (num) => {
 const gameQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const gamePrime = () => {
-  const num = generateRandomNumber(100, 2);
+  const num = generateRandomNumber(1, 50);
   const questionForUser = num;
-  const correctAnswer = isPrime(num) ? 'yes' : 'no';
+  const correctAnswer = String(isPrime(num) ? 'yes' : 'no');
 
   return [questionForUser, correctAnswer];
 };
