@@ -24,7 +24,7 @@ const getAnswerTheQuestion = () => {
   const num2 = generateRandomNumber(30, 1);
   const randomOperator = operators[generateRandomNumber(0, operatorsArrLength)];
   const questionForUser = `${num1} ${randomOperator} ${num2}`;
-  const correctAnswer = calculation(num1, randomOperator, num2).toString();
+  const correctAnswer = String(calculation(num1, randomOperator, num2));
 
   return [questionForUser, correctAnswer];
 };
