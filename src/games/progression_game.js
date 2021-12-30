@@ -2,15 +2,15 @@ import generateRandomNumber from '../fnRandomNumber.js';
 import gameStart from '../index.js';
 
 const getProgression = (start, stepOfProgression, progressionLength) => {
-  const progressionArr = [];
+  const progression = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
-    progressionArr.push(start + stepOfProgression * i);
+    progression.push(start + stepOfProgression * i);
   }
-  return progressionArr;
+  return progression;
 };
 
-const gameQuestion = 'What number is missing in the progression?';
+const gameRules = 'What number is missing in the progression?';
 
 const progressionGame = () => {
   const start = generateRandomNumber(0, 0);
@@ -20,13 +20,13 @@ const progressionGame = () => {
   const index = generateRandomNumber(2, progressionLength - 1);
   const correctAnswer = String(progression[index]);
   progression[index] = '..';
-  const questionForUser = progression.join(' ');
+  const question = progression.join(' ');
 
-  return [questionForUser, correctAnswer];
+  return [question, correctAnswer];
 };
 
 const startProgressionGame = () => {
-  gameStart(gameQuestion, progressionGame);
+  gameStart(gameRules, progressionGame);
 };
 
 export default startProgressionGame;

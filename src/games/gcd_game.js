@@ -14,19 +14,19 @@ const getGcd = (a, b) => {
   return num1 + num2;
 };
 
-const gameQuestion = 'Find the greatest common divisor of given numbers.';
+const gameRules = 'Find the greatest common divisor of given numbers.';
 
 const gameGcd = () => {
   const num1 = generateRandomNumber(40, 1);
   const num2 = generateRandomNumber(40, 1);
-  const questionForUser = `${num1} ${num2}`;
+  const question = `${num1} ${num2}`;
   const correctAnswer = getGcd(num1, num2).toString();
 
-  return [questionForUser, correctAnswer];
+  return [question, correctAnswer];
 };
 
 const startGcdGame = () => {
-  gameStart(gameQuestion, gameGcd);
+  gameStart(gameRules, gameGcd);
 };
 
 export default startGcdGame;
