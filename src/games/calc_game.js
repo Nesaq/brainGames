@@ -14,7 +14,7 @@ const calculation = (num1, operator, num2) => {
   }
 };
 
-const rules = 'What is the result of the expression?';
+const gameRules = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
 const getRoundData = () => {
@@ -28,7 +28,7 @@ const getRoundData = () => {
 };
 
 const startCalcGame = () => {
-  gameStart(rules, getRoundData);
+  gameStart(gameRules, getRoundData);
 };
 
 export default startCalcGame;
